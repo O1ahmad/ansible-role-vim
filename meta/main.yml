@@ -1,0 +1,28 @@
+---
+# role metadata file
+galaxy_info:
+  author: Ahmad Wilson
+  role_name: vim
+  description: vim (Vi-IMproved), a powerful flexible text editor for Linux operating systems
+  company: O1 Labs
+  license: license (Apache, BSD, MIT)
+  min_ansible_version: 2.6
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - vim
+    - text
+    - editor
+    - vi
