@@ -2,4 +2,24 @@
 - name: Default playbook for testing
   hosts: test-kitchen
   roles:
-    - ansible-role-<role>
+    - ansible-role-vim
+  vars:
+    vimrc_config:
+      kitchen:
+        - comment: "Don't try to be vi compatible"
+          commands:
+            - "set": "nocompatible"
+        - comment: "Help force plugins to load correctly when turned back on below"
+          commands:
+            - "filetype": "off"
+        - comment: "Turn on syntax highlighting"
+          commands:
+            - "syntax": "on"
+        - comment: "Let Vundle manage plugins"
+          commands:
+            - "set": "rtp+=~/.vim/bundle/Vundle.vim"
+            - "call": "vundle#begin()"
+            - "Plugin": "'VundleVim/Vundle.vim'"
+            - "Plugin": "'scrooloose/nerdtree'"
+            - "call": "vundle#end()"
+            - "filetype": "plugin indent on"

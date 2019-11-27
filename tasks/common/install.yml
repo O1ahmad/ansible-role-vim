@@ -1,0 +1,6 @@
+---
+- name: Install vim software package
+  package:
+    name: "{{ package_name }}"
+    state: present
+  become: true
