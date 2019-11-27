@@ -8,7 +8,7 @@
     mode: 0664
     backup: true
   vars:
-    account: global
+    config: "{{ vimrc_config['global'] }}"
   become: true
   when: vimrc_config is not none and "global" in vimrc_config
 
