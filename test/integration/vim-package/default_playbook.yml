@@ -1,0 +1,7 @@
+---
+- name: Default playbook for testing vim package installation
+  hosts: test-kitchen
+  roles:
+    - ansible-role-vim
+  vars:
+    package_name: vim-enhanced

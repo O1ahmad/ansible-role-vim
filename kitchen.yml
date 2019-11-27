@@ -93,6 +93,12 @@ platforms:
         - systemctl enable ssh.service
 
 suites:
+  - name: vim-package
+    provisioner:
+      playbook: test/integration/vim-package/default_playbook.yml
+    verifier:
+      inspec_tests:
+        - path: test/integration/vim-package
   - name: vimrc-config
     provisioner:
       playbook: test/integration/vimrc-config/default_playbook.yml
