@@ -3,5 +3,3 @@
   hosts: test-kitchen
   roles:
     - ansible-role-vim
-  vars:
-    package_name: vim-enhanced
