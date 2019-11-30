@@ -1,5 +1,4 @@
 ---
-# main installation, configuration and operation tasks
 - name: Include OS and distribution specific variables.
   include_vars: "{{ item }}"
   with_first_found:
@@ -8,7 +7,6 @@
         - "{{ ansible_os_family }}.yml"
       skip: true
 
-# main role installation, configuration and operation tasks
 - name: Include common setup tasks
   include_tasks: "common/{{ item }}.yml"
   with_items:
