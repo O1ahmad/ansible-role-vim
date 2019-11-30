@@ -15,10 +15,8 @@ describe file('/home/kitchen/.vimrc') do
   its('owner') { should eq 'kitchen' }
   its('group') { should eq 'kitchen' }
 
-  its('content') { should match("set incsearch") }
-  its('content') { should match("set hlsearch") }
-  its('content') { should match("nnoremap j gj") }
-  its('content') { should match("nnoremap k gk") }
+  its('content') { should match("{{{") }
+  its('content') { should match("\" }}}") }
   its('content') { should match("if exists") }
   its('content') { should match("endif") }
 end

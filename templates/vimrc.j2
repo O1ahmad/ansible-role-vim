@@ -3,12 +3,13 @@
 
 {% for spec in config %}
 {% if 'comment' in spec %}
-" {{ spec.comment }}
+" {{ spec.comment }} {{ '{{{' }}
 {% endif %}
 {% for entry in spec.commands %}
 {% for cmd,flags in entry.items() %}
 {{ cmd }} {{ flags }}
 {% endfor %}
 {% endfor %}
+" }}}
 
 {% endfor %}
