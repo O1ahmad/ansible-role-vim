@@ -1,8 +1,8 @@
 Ansible Role :art: :memo: Vim
 =========
-[![Galaxy Role](*role-shield-link*)](--role-link--)
-[![Downloads](*downloads-shield-link*)](--role-link--)
-[![Build Status](*build-shield-link*)](--role-link--)
+[![Galaxy Role](https://img.shields.io/ansible/role/44928.svg)](https://galaxy.ansible.com/0x0I/vim)
+[![Downloads](https://img.shields.io/ansible/role/d/44928.svg)](https://galaxy.ansible.com/0x0I/vim)
+[![Build Status](https://travis-ci.org/0x0I/ansible-role-vim.svg?branch=master)](https://travis-ci.org/0x0I/ansible-role-vim)
 
 **Table of Contents**
   - [Supported Platforms](#supported-platforms)
