@@ -96,7 +96,7 @@ The following provides an overview and example configurations for reference:
 However, technically any splitting of the vim command syntax is allowed and should result in the correct rendering of the desired configuration:
 
  ```yaml
-  tmux_config:
+  vimrc_config:
     user-account-1:
       - commands:
           - set: "wildmenu"
@@ -156,9 +156,9 @@ Apply sensible vim UI customizations:
 ```
 - hosts: dev
   roles:
-  - role: 0x0I.tmux
+  - role: 0x0I.vim
     vars:
-      tmux_config:
+      vimrc_config:
         user:
           - comment: "adjust leader shortcut and common dotfile editing macros"
             commands:
