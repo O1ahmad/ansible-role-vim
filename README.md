@@ -52,7 +52,7 @@ Using this role, configuration of either a globally scoped or per-user scope of 
 
 The following provides an overview and example configurations for reference:
 
-`[vimrc_config:  {global | user-account} : {entry} :] comment: <string>` (**default**: see *none*)
+`[vimrc_config:  {global | user-account} : {entry} :] comment: <string>` (**default**: *none*)
 - [optional] comment associated with configuration command
 
 ##### Example
