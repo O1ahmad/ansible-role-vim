@@ -60,9 +60,7 @@ The following provides an overview and example configurations for reference:
  ```yaml
   vimrc_config:
     global:
-      - comment: >-
-          This comment provides context around the command(s) below.
-          In this case, enable syntax-highlighting.
+      - comment: "This comment provides context around the command(s) below. In this case, enable syntax-highlighting."
         commands:
           - syntax: "enable"
   ```
@@ -170,7 +168,7 @@ Apply sensible vim UI customizations:
               - "nnoremap": "<leader>sb :source ~/.bashrc<CR>"
               - "nnoremap": "<leader>a :Ag"
               - "nnoremap": "<leader>u :GundoToggle<CR>"
-          - comment: "re-defined movement keys for easier navigation"
+          - comment: "re-define movement keys for easier navigation"
             commands:
               - "nnoremap": "j gj"
               - "nnoremap": "k gk"
