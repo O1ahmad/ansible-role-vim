@@ -1,3 +1,5 @@
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/767px-Vimlogo.svg.png" alt="vim logo" title="vim" align="right" height="60" /></p>
+
 Ansible Role :art: :memo: Vim
 =========
 [![Galaxy Role](https://img.shields.io/ansible/role/44928.svg)](https://galaxy.ansible.com/0x0I/vim)
