@@ -7,7 +7,7 @@
         - "{{ ansible_os_family }}.yml"
       skip: true
 
-- name: Include common setup tasks
+- name: Include common provisioning tasks
   include_tasks: "common/{{ item }}.yml"
   with_items:
     - "install"

@@ -1,5 +1,4 @@
 ---
-# defaults variable file
 package_name: vim-enhanced
 
 global_config_dir: /etc
