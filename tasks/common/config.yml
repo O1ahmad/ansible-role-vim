@@ -2,8 +2,8 @@
 - name: Copy custom systemd-wide configuration in place
   become: true
   template:
-    src: "{{ vimrc_config_file }}.j2"
-    dest: "{{ global_config_dir }}/{{ vimrc_config_file }}"
+    src: "{{ _vimrc_config_file }}.j2"
+    dest: "{{ _global_config_dir }}/{{ _vimrc_config_file }}"
     owner: root
     group: root
     mode: 0664
@@ -15,8 +15,8 @@
 - name: Copy user configuration in place
   become: true
   template:
-    src: "{{ vimrc_config_file }}.j2"
-    dest: "/home/{{ item }}/.{{ vimrc_config_file }}"
+    src: "{{ _vimrc_config_file }}.j2"
+    dest: "/home/{{ item }}/.{{ _vimrc_config_file }}"
     owner: "{{ item }}"
     group: "{{ item }}"
     mode: 0664
