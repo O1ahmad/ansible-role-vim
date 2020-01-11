@@ -1,5 +1,5 @@
 ---
-- name: Copy custom systemd-wide configuration in place
+- name: Render custom systemd-wide configuration
   become: true
   template:
     src: "{{ _vimrc_config_file }}.j2"
@@ -11,8 +11,11 @@
   vars:
     config: "{{ vimrc_config['global'] }}"
   when: vimrc_config is defined and "global" in vimrc_config
+  tags:
+    - config
+    - global
 
-- name: Copy user configuration in place
+- name: Render user configuration
   become: true
   template:
     src: "{{ _vimrc_config_file }}.j2"
@@ -25,3 +28,6 @@
     config: "{{ vimrc_config[item] }}"
   with_items: "{{ vimrc_config.keys() | difference(['global']) }}"
   when: vimrc_config is defined and vimrc_config.keys() | difference(['global']) | length > 0
+  tags:
+    - config
+    - user
