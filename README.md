@@ -13,6 +13,7 @@ Ansible Role :art: :memo: Vim
       - [Install](#install)
       - [Config](#config)
       - [Launch](#launch)
+      - [Uninstall](#uninstall)
   - [Dependencies](#dependencies)
   - [Example Playbook](#example-playbook)
   - [License](#license)
@@ -38,6 +39,7 @@ Role Variables
 Variables are available and organized according to the following software & machine provisioning stages:
 * _install_
 * _config_
+* _uninstall_
 
 #### Install
 
@@ -107,6 +109,14 @@ However, technically any splitting of the vim command syntax is allowed and shou
           - "": "nnoremap B ^"
             "nnoremap E $": ""
   ```
+  
+  #### Uninstall
+
+Remove both package installations as well as managed `vimrc` user configs, returning the target host to its configured state prior to application of this role with the exception of managed global config settings (e.g. can be useful for recycling users and cleaning up stale settings).
+_The following variable(s) can be customized to manage this uninstall process:_
+
+`perform_uninstall: <true | false>` (**default**: `false`)
+- whether to uninstall managed `vim` installations and user configurations on a target host (**see**: `handlers/main.yml` for details)
 
 Dependencies
 ------------
