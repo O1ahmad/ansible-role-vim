@@ -1,2 +1,14 @@
 ---
-# default handlers file
+- name: Uninstall vim client configs
+  file:
+    path: "/home/{{ item }}/.{{ _vimrc_config_file }}"
+    state: absent
+  with_items: "{{ vimrc_config.keys() | difference(['global']) }}"
+  when: vimrc_config is defined
+  listen: Uninstall service
+
+- name: Uninstall vim package
+  package:
+    name: "{{ package_name }}"
+    state: absent
+  listen: Uninstall service
