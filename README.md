@@ -69,14 +69,14 @@ The following provides an overview and example configurations for reference:
         commands:
           - syntax: "enable"
   ```
-  
+
   The above configuration setting will be rendered within the globally scoped `vimrc` configuration file with surrounding [comment fold markings](http://vimdoc.sourceforge.net/htmldoc/fold.html#folds) like so:
-  
+
   ```bash
  " This comment provides context around the command(s) below. In this case, enable syntax-highlighting {{{
  syntax enable
  " }}}
-  ``` 
+  ```
 
 `[vimrc_config:  {global | user-account} : {entry} :] commands: <key: value,...>` (**default**: see `defaults/main.yml`)
 - a collection of configuration commands to render within the specified *account's* vimrc config. A list of available commands can be found [here](https://vimhelp.org/usr_05.txt.html#usr_05.txt)
@@ -95,7 +95,7 @@ The following provides an overview and example configurations for reference:
           - set: "smartcase"
           - set: "showmatch"
   ```
-  
+
 However, technically any splitting of the vim command syntax is allowed and should result in the correct rendering of the desired configuration:
 
  ```yaml
@@ -110,7 +110,7 @@ However, technically any splitting of the vim command syntax is allowed and shou
           - "": "nnoremap B ^"
             "nnoremap E $": ""
   ```
-  
+
   #### Uninstall
 
 Remove both package installations as well as managed `vimrc` user configs, returning the target host to its configured state prior to application of this role with the exception of managed global config settings (e.g. can be useful for recycling users and cleaning up stale settings).
