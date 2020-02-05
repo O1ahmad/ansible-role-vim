@@ -1,4 +1,4 @@
-title "vimrc configuration"
+title "vim configuration integration tests"
 
 describe file('/etc/vimrc') do
   it { should exist }

@@ -1,4 +1,4 @@
-title "Package installation"
+title "vim package installation integration tests"
 
 case os[:family]
 when "redhat"
