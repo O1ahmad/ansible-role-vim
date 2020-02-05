@@ -1,5 +1,5 @@
 ---
-- name: Default playbook for testing vim package installation
+- name: vim package installation integration test playbook
   hosts: test-kitchen
   roles:
-    - ansible-role-vim
+    - role: ansible-role-vim
