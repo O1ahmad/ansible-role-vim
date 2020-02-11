@@ -3,9 +3,10 @@
 Ansible Role :art: :memo: Vim
 =========
 [![Galaxy Role](https://img.shields.io/ansible/role/44928.svg)](https://galaxy.ansible.com/0x0I/vim)
-[![Downloads](https://img.shields.io/ansible/role/d/44928.svg)](https://galaxy.ansible.com/0x0I/vim)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/0x0I/ansible-role-vim?color=yellow)
+[![Downloads](https://img.shields.io/ansible/role/d/44928.svg?color=lightgrey)](https://galaxy.ansible.com/0x0I/vim)
 [![Build Status](https://travis-ci.org/0x0I/ansible-role-vim.svg?branch=master)](https://travis-ci.org/0x0I/ansible-role-vim)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
 
 **Table of Contents**
   - [Supported Platforms](#supported-platforms)
@@ -13,7 +14,6 @@ Ansible Role :art: :memo: Vim
   - [Role Variables](#role-variables)
       - [Install](#install)
       - [Config](#config)
-      - [Launch](#launch)
       - [Uninstall](#uninstall)
   - [Dependencies](#dependencies)
   - [Example Playbook](#example-playbook)
@@ -79,7 +79,7 @@ The following provides an overview and example configurations for reference:
   ```
 
 `[vimrc_config:  {global | user-account} : {entry} :] commands: <key: value,...>` (**default**: see `defaults/main.yml`)
-- a collection of configuration commands to render within the specified *account's* vimrc config. A list of available commands can be found [here](https://vimhelp.org/usr_05.txt.html#usr_05.txt)
+- a collection of configuration commands to render within the specified *account's* vimrc config. A list of available commands can be found [here](https://vimhelp.org/usr_05.txt.html#usr_05.txt).
 
 **Typically each key:value pair represents the `{command}: {flags}` components of a vim command respectively:**
 
