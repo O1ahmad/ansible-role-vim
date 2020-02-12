@@ -130,7 +130,7 @@ default example:
 ```
 - hosts: all
   roles:
-  - role: 0xOI.vim
+  - role: 0x0I.vim
 ```
 
 Install and manage a specific version:
